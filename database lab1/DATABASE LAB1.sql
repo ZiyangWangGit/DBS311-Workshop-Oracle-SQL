@@ -1,6 +1,7 @@
 /*Write a query to display the After-tomorrow¡¯s date in the following format:September 28th of 
 year 2016Your result will depend on the day when you create this query.Label the column After Tomorrow*/
-SELECT TO_CHAR(SYSDATE + 2, 'FMMonth DD"th" "of year" YYYY') AS "After Tomorrow" FROM dual;
+SELECT 
+    TO_CHAR(SYSDATE + 2, 'FMMonth DD"th" "of year" YYYY') AS "After Tomorrow" FROM dual;
 
 /*For each employee in departments 50 and 60 display last name, first name,salary, 
 and salary increased by 7% and expressed as a whole number.Label the column Good S
