@@ -3,6 +3,7 @@ year 2016Your result will depend on the day when you create this query.Label the
 SELECT 
     TO_CHAR(SYSDATE + 2, 'FMMonth DD"th" "of year" YYYY') AS "After Tomorrow" FROM dual;
 
+
 /*For each employee in departments 50 and 60 display last name, first name,salary, 
 and salary increased by 7% and expressed as a whole number.Label the column Good S
 alary.Also add a column that subtracts the old salary from the new salary and multipliesby 12. 
@@ -32,7 +33,8 @@ WHERE
     UPPER(SUBSTR (last_name, -1)) = 'S' AND (UPPER(first_name) LIKE 'C%' OR UPPER(first_name) LIKE 'K%')
 ORDER BY 
     last_name;
-    
+
+
 /*For each employee hired before 1992 who is earning more than $10000, displaythe employee¡¯s 
 last name, salary, hire date and calculate the number of YEARSbetween TODAY and the date the 
 employee was hired. Round the number of yearsup to the closest whole number. Label the column 
@@ -62,6 +64,7 @@ FROM
     location
 WHERE 
     city LIKE 'S%' AND LENGTH(city) >= 8;
+
 
 /*Display each employee¡¯s last name, hire date, and salary review date, 
 which isthe first Tuesday after a year of service, but only for those hired 
