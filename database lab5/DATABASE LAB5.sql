@@ -40,7 +40,7 @@ Phone: 515.123.8181
 Hire date: 07-JUN-16
 Job title: Public Accountant
 The procedure displays a proper error message if any error*/
-CREATE PROCEDURE find_employee (v_employeeId NUMBER)
+CREATE PROCEDURE find_employee (p_employeeId NUMBER)
 AS
     v_firstName VARCHAR2(255);
     v_lastName VARCHAR2(255);
@@ -56,7 +56,7 @@ BEGIN
     FROM 
         employees
     WHERE
-        employee_id = v_employeeId;
+        employee_id = p_employeeId;
     
     dbms_output.put_line('First name: ' || v_firstName);
     dbms_output.put_line('Last name: ' || v_lastName);
@@ -89,7 +89,7 @@ was an invalid category Id.The procedure gets two parameters:
 p_catid IN products.category_id%TYPE
 p_amount IN NUMBER
 
-To define the type of variables that store values of a table¡¯ column, you 
+To define the type of variables that store values of a tableÂ¡Â¯ column, you 
 can also write:
 variable_name   table_name.column_name%TYPE;
 
@@ -145,8 +145,8 @@ than the average price of all products by 1%. (list_price * 1.01). Write a store
 procedure named Update_Price_Under_Avg. This procedure does not have any 
 parameters. You need to find the average price of all products and store it
 into a variable of the same type. If the average price is less than or equal to 
-$1000, update products¡¯ price by 2% if the price of the product is less than the 
-calculated average. If the average price is greater than $1000, update products¡¯ 
+$1000, update productsÂ¡Â¯ price by 2% if the price of the product is less than the 
+calculated average. If the average price is greater than $1000, update productsÂ¡Â¯ 
 price by 1% if the price of the product is less than the calculated average. The
 query displays an error message if any error occurs. Otherwise, it displays the 
 number of updated rows*/
